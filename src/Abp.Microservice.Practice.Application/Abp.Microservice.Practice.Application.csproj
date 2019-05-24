@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="0.17.0.0" />
+    <ProjectReference Include="..\Abp.Microservice.Practice.Application.Contracts\Abp.Microservice.Practice.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Abp.Microservice.Practice.Domain\Abp.Microservice.Practice.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

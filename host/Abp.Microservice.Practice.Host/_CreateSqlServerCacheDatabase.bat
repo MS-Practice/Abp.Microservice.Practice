@@ -1,0 +1,1 @@
+dotnet sql-cache create "Server=localhost;Database=Practice_Cache;Trusted_Connection=True;MultipleActiveResultSets=true" dbo TestCache

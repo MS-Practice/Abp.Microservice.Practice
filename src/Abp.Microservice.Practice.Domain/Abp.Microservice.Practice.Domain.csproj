@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Abp.Microservice.Practice.Domain.Shared\Abp.Microservice.Practice.Domain.Shared.csproj" />
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="0.17.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Abp.Microservice\Localization\en.json" />
+    <EmbeddedResource Include="Abp.Microservice\Localization\zh-Hans.json" />
+  </ItemGroup>
+
+</Project>
