@@ -21,7 +21,7 @@ namespace Abp.Microservice.Practice
 
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.Resources.Get<PracticeResource>().AddVirtualJson("/Abp.Microservice/Practice/Localization/Domain");
+                options.Resources.Get<PracticeResource>().AddVirtualJson("/Abp.Microservice.Practice/Localization");
             });
 
             Configure<ExceptionLocalizationOptions>(options =>

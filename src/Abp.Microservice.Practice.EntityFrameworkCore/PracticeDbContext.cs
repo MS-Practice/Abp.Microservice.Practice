@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Abp.Microservice.Practice.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -14,7 +15,7 @@ namespace Abp.Microservice.Practice.EntityFrameworkCore
         /* Add DbSet for each Aggregate Root here. Example:
          * public DbSet<Question> Questions { get; set; }
          */
-
+        public DbSet<Menu> Menus { get; set; }
         public PracticeDbContext(DbContextOptions<PracticeDbContext> options) 
             : base(options)
         {

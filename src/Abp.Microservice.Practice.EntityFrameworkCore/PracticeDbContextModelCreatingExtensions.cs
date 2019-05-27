@@ -1,4 +1,6 @@
 ﻿using System;
+using Abp.Microservice.Practice.Domain;
+using Abp.Microservice.Practice.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
@@ -16,8 +18,17 @@ namespace Abp.Microservice.Practice.EntityFrameworkCore
 
             optionsAction?.Invoke(options);
 
+            builder.Entity<Menu>()
+                .ToTable("Menus")
+                .Property(p => p.Name).IsRequired().HasMaxLength(MenuContractConsts.NameMaxLength);
+            builder.Entity<Menu>()
+                .HasKey(p => p.Id);
+            builder.Entity<Menu>(p =>
+            {
+                p.Property(m => m.Url).IsRequired();
+            });
             /* Configure all entities here. Example:
-
+            
             builder.Entity<Question>(b =>
             {
                 //Configure table & schema name

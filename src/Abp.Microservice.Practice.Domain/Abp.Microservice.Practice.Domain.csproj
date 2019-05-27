@@ -13,8 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Abp.Microservice\Localization\en.json" />
-    <EmbeddedResource Include="Abp.Microservice\Localization\zh-Hans.json" />
+    <EmbeddedResource Include="Localization\en.json" />
+    <EmbeddedResource Include="Localization\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Managers\" />
   </ItemGroup>
 
 </Project>
