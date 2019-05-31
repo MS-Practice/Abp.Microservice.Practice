@@ -1,7 +1,6 @@
-﻿using Exceptions;
+﻿using Abp.Microservice.Practice.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities;
 
@@ -40,6 +39,21 @@ namespace Abp.Microservice.Practice.Domain.Entities
         public void Delete()
         {
             IsDeleted = true;
+        }
+
+        public void UpdateUrl(string url)
+        {
+            Url = url;
+        }
+
+        public void UpdateName(string name)
+        {
+            this.Name = name;
+        }
+
+        public void UpdateIcon(string icon)
+        {
+            Icon = icon;
         }
     }
 }

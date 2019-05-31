@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Exceptions
+namespace Abp.Microservice.Practice.Domain.Exceptions
 {
     public class DomainArgumentException : Exception
     {
+        private string v;
+
         public DomainArgumentException() : base()
         {
         }
