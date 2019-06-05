@@ -55,5 +55,11 @@ namespace Abp.Microservice.Practice.Managers
             if (id <= 0)
                 throw new ArgumentException("id is not valid");
         }
+        //Q：新增的实体的DTO是放在Domain层还是在Domain.Share层
+        public async Task<Menu> InsertMenuAsync(Menu menu)
+        {
+            _menuChcker.ThrowWhenMenuIsExisted(menu.Name, menu.Url);
+            return await _menuRepository.InsertAsync(menu);
+        }
     }
 }
