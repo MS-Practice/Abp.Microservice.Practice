@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Abp.Microservice.Practice.Domain.Entities;
 using Abp.Microservice.Practice.Domain.Exceptions;
-using Managers;
+using Abp.Microservice.Practice.Managers;
 
 namespace Abp.Microservice.Practice.Domain.Checks
 {

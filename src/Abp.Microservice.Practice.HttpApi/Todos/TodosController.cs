@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Abp.Microservice.Practice.Menus;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp;
@@ -13,16 +14,16 @@ namespace Abp.Microservice.Practice.Todos
     [Authorize]
     public class TodosController : AbpController
     {
-        private readonly ITodoAppService _todoAppService;
+        private readonly IMenuAppService _todoAppService;
 
-        public TodosController(ITodoAppService todoAppService)
+        public TodosController(IMenuAppService todoAppService)
         {
             _todoAppService = todoAppService;
         }
 
         [HttpGet]
         [Route("")]
-        public Task<PagedResultDto<TodoDto>> GetListAsync()
+        public Task<PagedResultDto<MenuDto>> GetListAsync()
         {
             return _todoAppService.GetListAsync();
         }

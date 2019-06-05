@@ -8,7 +8,7 @@ using Volo.Abp.Domain.Services;
 using Abp.Microservice.Practice.Domain.Entities;
 using Abp.Microservice.Practice.Domain.Checks;
 
-namespace Managers
+namespace Abp.Microservice.Practice.Managers
 {
     public class MenuManager : DomainService
     {
