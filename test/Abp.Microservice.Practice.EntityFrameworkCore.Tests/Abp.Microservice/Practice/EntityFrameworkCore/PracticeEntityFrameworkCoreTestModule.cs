@@ -22,7 +22,8 @@ namespace Abp.Microservice.Practice.EntityFrameworkCore
             {
                 options.Configure(abpDbContextConfigurationContext =>
                 {
-                    abpDbContextConfigurationContext.DbContextOptions.UseSqlite(sqliteConnection);
+                    //abpDbContextConfigurationContext.DbContextOptions.UseSqlite(sqliteConnection);
+                    abpDbContextConfigurationContext.DbContextOptions.UseInMemoryDatabase("Add_writes_to_database");
                 });
             });
         }
